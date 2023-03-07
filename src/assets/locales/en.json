@@ -1,0 +1,28 @@
+{
+  "translation": {
+    "homepage_screen": {
+      "title": "Homepage",
+      "logout": "Logout"
+    },
+    "login_screen": {
+      "title": "Login",
+      "home": "Go to Home",
+      "forgot": "Go to Forgot password",
+      "subscribe": "Go to Subscribe"
+    },
+    "subscribe_screen": {
+      "title": "Subscribe",
+      "description": "Content of the subscribe page."
+    },
+    "forgot_password_screen": {
+      "title": "Forgot Password",
+      "description": "Content of the forgot screen page."
+    },
+    "onboarding_screen": {
+      "title": "OnBoarding"
+    },
+    "splash_screen": {
+      "title": "Splash screen"
+    }
+  }
+}
