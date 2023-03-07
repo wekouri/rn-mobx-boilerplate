@@ -1,9 +1,5 @@
 import gestureHandlerRootHOC from 'components/hocs/GestureHandlerRoot/GestureHandlerRoot'
-import NavigationWrapper from 'components/hocs/NavigationWrapper/NavigationWrapper'
 import { Navigation } from 'react-native-navigation'
-import { IModuleStore } from 'redux-dynamic-modules'
-import { Persistor } from 'redux-persist'
-import { MainState } from 'store/types'
 
 // Screens
 import ForgotPassword from './ForgotPassword/ForgotPassword'
@@ -89,43 +85,41 @@ export const globalComponentOptions = {
 }
 
 // Register screens
-export const registerScreens = (store: IModuleStore<MainState>, persistor: Persistor) => {
-  Navigation.registerComponent(
-    SplashScreen.name,
-    () => gestureHandlerRootHOC(NavigationWrapper(Splash, store, persistor)),
-    () => Splash,
-  )
-  Navigation.registerComponent(
-    RedirectScreen.name,
-    () => gestureHandlerRootHOC(NavigationWrapper(Redirect, store, persistor)),
-    () => Redirect,
-  )
-  Navigation.registerComponent(
-    LoginScreen.name,
-    () => gestureHandlerRootHOC(NavigationWrapper(Login, store, persistor)),
-    () => Login,
-  )
-  Navigation.registerComponent(
-    SubscribeScreen.name,
-    () => gestureHandlerRootHOC(NavigationWrapper(Subscribe, store, persistor)),
-    () => Subscribe,
-  )
-  Navigation.registerComponent(
-    ForgotPasswordScreen.name,
-    () => gestureHandlerRootHOC(NavigationWrapper(ForgotPassword, store, persistor)),
-    () => ForgotPassword,
-  )
-  Navigation.registerComponent(
-    OnBoardingScreen.name,
-    () => gestureHandlerRootHOC(NavigationWrapper(OnBoarding, store, persistor)),
-    () => OnBoarding,
-  )
-  Navigation.registerComponent(
-    HomepageScreen.name,
-    () => gestureHandlerRootHOC(NavigationWrapper(Homepage, store, persistor)),
-    () => Homepage,
-  )
-}
+Navigation.registerComponent(
+  SplashScreen.name,
+  () => gestureHandlerRootHOC(Splash),
+  () => Splash,
+)
+Navigation.registerComponent(
+  RedirectScreen.name,
+  () => gestureHandlerRootHOC(Redirect),
+  () => Redirect,
+)
+Navigation.registerComponent(
+  LoginScreen.name,
+  () => gestureHandlerRootHOC(Login),
+  () => Login,
+)
+Navigation.registerComponent(
+  SubscribeScreen.name,
+  () => gestureHandlerRootHOC(Subscribe),
+  () => Subscribe,
+)
+Navigation.registerComponent(
+  ForgotPasswordScreen.name,
+  () => gestureHandlerRootHOC(ForgotPassword),
+  () => ForgotPassword,
+)
+Navigation.registerComponent(
+  OnBoardingScreen.name,
+  () => gestureHandlerRootHOC(OnBoarding),
+  () => OnBoarding,
+)
+Navigation.registerComponent(
+  HomepageScreen.name,
+  () => gestureHandlerRootHOC(Homepage),
+  () => Homepage,
+)
 
 // App Root
 const appRoot = {

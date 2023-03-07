@@ -6,12 +6,13 @@
 - Use react-native-rename ``npx react-native-rename <newName> -b <bundleIdentifier> ``
 - Android - search all com.basic and change it with the new namespace
 - Android - change folders name inside android/app/src/main/java
+- Set up permissions ``npx react-native setup-ios-permissions``
 
 
 ## Features:
 
 - Navigation init
-- Storage with redux
+- Storage with mobx
 - Basic folder structure
 - Multi language with i18n
 - Eslint and autosave
@@ -32,9 +33,9 @@
 - container: containers for screens inside a tab view.
 - providers: app themes.
 - screens: main screens.
+- store: mobx store modules.
 - utils:
   - helpers: methods that will be used across the app
-  - redux: methods that will be used in redux
   - validation: methods related to form validation
   - sdk: centralized api requests handler (should be named ``project-sdk``)
 
@@ -43,6 +44,14 @@
 - Eslint
 - Husky
 - Prettier
+
+## Useful links
+
+- mobx: https://mobx.js.org/README.html
+- wix/react-native-navigation: https://wix.github.io/react-native-navigation/docs/before-you-start/
+- react-native-reanimated: https://docs.swmansion.com/react-native-reanimated/
+- gorhom/react-native-bottom-sheet: https://gorhom.github.io/react-native-bottom-sheet/
+
 
 ## Committing recap
 
