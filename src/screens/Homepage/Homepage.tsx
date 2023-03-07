@@ -1,7 +1,7 @@
 import React from 'react'
 import { SafeAreaView, View, Text, Pressable } from 'react-native'
 import { useAuth } from 'hooks'
-import { observable } from 'mobx'
+import { observer } from 'mobx-react-lite'
 import { useTranslation } from 'react-i18next'
 import { Navigation } from 'react-native-navigation'
 import { authRoot } from 'screens/navigator'
@@ -14,7 +14,7 @@ const base = 'homepage_screen'
 type Props = ScreenProps
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const Homepage = observable(({ componentId = '' }: Partial<Props>): JSX.Element => {
+const Homepage = observer(({ componentId = '' }: Partial<Props>): JSX.Element => {
   const { t } = useTranslation()
   const { setIsAuthenticated } = useAuth()
 

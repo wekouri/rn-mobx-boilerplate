@@ -85,43 +85,41 @@ export const globalComponentOptions = {
 }
 
 // Register screens
-export const registerScreens = () => {
-  Navigation.registerComponent(
-    SplashScreen.name,
-    () => gestureHandlerRootHOC(Splash),
-    () => Splash,
-  )
-  Navigation.registerComponent(
-    RedirectScreen.name,
-    () => gestureHandlerRootHOC(Redirect),
-    () => Redirect,
-  )
-  Navigation.registerComponent(
-    LoginScreen.name,
-    () => gestureHandlerRootHOC(Login),
-    () => Login,
-  )
-  Navigation.registerComponent(
-    SubscribeScreen.name,
-    () => gestureHandlerRootHOC(Subscribe),
-    () => Subscribe,
-  )
-  Navigation.registerComponent(
-    ForgotPasswordScreen.name,
-    () => gestureHandlerRootHOC(ForgotPassword),
-    () => ForgotPassword,
-  )
-  Navigation.registerComponent(
-    OnBoardingScreen.name,
-    () => gestureHandlerRootHOC(OnBoarding),
-    () => OnBoarding,
-  )
-  Navigation.registerComponent(
-    HomepageScreen.name,
-    () => gestureHandlerRootHOC(Homepage),
-    () => Homepage,
-  )
-}
+Navigation.registerComponent(
+  SplashScreen.name,
+  () => gestureHandlerRootHOC(Splash),
+  () => Splash,
+)
+Navigation.registerComponent(
+  RedirectScreen.name,
+  () => gestureHandlerRootHOC(Redirect),
+  () => Redirect,
+)
+Navigation.registerComponent(
+  LoginScreen.name,
+  () => gestureHandlerRootHOC(Login),
+  () => Login,
+)
+Navigation.registerComponent(
+  SubscribeScreen.name,
+  () => gestureHandlerRootHOC(Subscribe),
+  () => Subscribe,
+)
+Navigation.registerComponent(
+  ForgotPasswordScreen.name,
+  () => gestureHandlerRootHOC(ForgotPassword),
+  () => ForgotPassword,
+)
+Navigation.registerComponent(
+  OnBoardingScreen.name,
+  () => gestureHandlerRootHOC(OnBoarding),
+  () => OnBoarding,
+)
+Navigation.registerComponent(
+  HomepageScreen.name,
+  () => gestureHandlerRootHOC(Homepage),
+  () => Homepage,
+)
 
 // App Root
 const appRoot = {

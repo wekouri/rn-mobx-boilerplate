@@ -2,16 +2,13 @@
 import React, { useEffect } from 'react'
 import { SafeAreaView, View, Image } from 'react-native'
 import { useUI } from 'hooks'
+import { observer } from 'mobx-react-lite'
 import Style from './SplashScreen.style'
 
 // Global
 const logo = require('../../assets/pngs/logo.png')
 
-// Interfaces
-type Props = ScreenProps
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const SplashScreen = ({ componentId = '' }: Partial<Props>): JSX.Element => {
+const SplashScreen = observer((): JSX.Element => {
   // Auth variables
   const { setShowSplash } = useUI()
 
@@ -27,6 +24,6 @@ const SplashScreen = ({ componentId = '' }: Partial<Props>): JSX.Element => {
       </View>
     </SafeAreaView>
   )
-}
+})
 
 export default SplashScreen

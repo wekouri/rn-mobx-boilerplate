@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, Suspense, useState } from 'react'
 import { View, Text } from 'react-native'
 import { useAuth, useUI } from 'hooks'
+import { observer } from 'mobx-react-lite'
 import { Navigation } from 'react-native-navigation'
 import { appRoot, LoginScreen, OnBoardingScreen, SplashScreen } from '../navigator'
 import Style from './Redirect.style'
@@ -10,7 +11,7 @@ import '../i18n'
 
 type Props = ScreenProps
 
-const Redirect = ({ componentId = '' }: Partial<Props>): JSX.Element => {
+const Redirect = observer(({ componentId = '' }: Partial<Props>): JSX.Element => {
   // State variables
   const [isFirstLaunch, setIsFirstLaunch] = useState(true)
 
@@ -87,6 +88,6 @@ const Redirect = ({ componentId = '' }: Partial<Props>): JSX.Element => {
       <View style={Style.boot} />
     </Suspense>
   )
-}
+})
 
 export default Redirect
