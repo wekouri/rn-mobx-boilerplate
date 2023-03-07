@@ -1,8 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
 import { SafeAreaView, View, Image } from 'react-native'
-import { useDispatch } from 'react-redux'
-import { hideSplashscreen } from 'store/modules/ui/ui.actions'
+import { useUI } from 'hooks'
 import Style from './SplashScreen.style'
 
 // Global
@@ -11,15 +10,15 @@ const logo = require('../../assets/pngs/logo.png')
 // Interfaces
 type Props = ScreenProps
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SplashScreen = ({ componentId = '' }: Partial<Props>): JSX.Element => {
-  const dispatch = useDispatch()
+  // Auth variables
+  const { setShowSplash } = useUI()
 
   // Hooks
   useEffect(() => {
-    setTimeout(() => dispatch(hideSplashscreen()), 1500)
+    setTimeout(() => setShowSplash(false), 1500)
   }, [])
-
-  console.log(componentId)
 
   return (
     <SafeAreaView style={Style.safeArea}>

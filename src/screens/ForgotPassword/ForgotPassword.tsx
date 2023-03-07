@@ -1,5 +1,6 @@
 import React from 'react'
 import { SafeAreaView, View, Text, Pressable } from 'react-native'
+import { observer } from 'mobx-react-lite'
 import { useTranslation } from 'react-i18next'
 import { Navigation } from 'react-native-navigation'
 import Style from './ForgotPassword.style'
@@ -10,15 +11,13 @@ const base = 'forgot_password_screen'
 // Interfaces
 type Props = ScreenProps
 
-const ForgotPassword = ({ componentId = '' }: Partial<Props>): JSX.Element => {
+const ForgotPassword = observer(({ componentId = '' }: Partial<Props>): JSX.Element => {
   const { t } = useTranslation()
 
   // Methods
   const _onNavigateBack = () => {
     Navigation.pop(componentId)
   }
-
-  console.log(componentId)
 
   return (
     <SafeAreaView style={Style.safeArea}>
@@ -34,6 +33,6 @@ const ForgotPassword = ({ componentId = '' }: Partial<Props>): JSX.Element => {
       </Pressable>
     </SafeAreaView>
   )
-}
+})
 
 export default ForgotPassword

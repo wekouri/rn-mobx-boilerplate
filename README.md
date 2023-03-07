@@ -11,7 +11,7 @@
 ## Features:
 
 - Navigation init
-- Storage with redux
+- Storage with mobx
 - Basic folder structure
 - Multi language with i18n
 - Eslint and autosave
@@ -32,9 +32,9 @@
 - container: containers for screens inside a tab view.
 - providers: app themes.
 - screens: main screens.
+- store: mobx store modules.
 - utils:
   - helpers: methods that will be used across the app
-  - redux: methods that will be used in redux
   - validation: methods related to form validation
   - sdk: centralized api requests handler (should be named ``project-sdk``)
 
